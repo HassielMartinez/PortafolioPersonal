@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="shortcut icon" href="img/ico/icohass.ico" type="image/x-icon">
+
+
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/b9e5a8bdb1.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-principal">
+         <div class="container">
+             <a class="navbar-brand" href="index.html">
+                 <img src="img/logoHass.png" alt="icono" width ="60px">
+             </a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
+             
+             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+               <ul class="navbar-nav">
+                 <li class="nav-item">
+                   <a class="nav-link text-white"  href="index.html">Inicio</a>
+                 </li>              
+                   <li class="nav-item">
+                       <a class="nav-link text-white" href="sobremi.html">Sobre mi</a> 
+                   </li>
+   
+                   <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Galeria</a>
+                       <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="galeria.html#digital">Fotografia Digital</a></li>
+                        <li><a class="dropdown-item" href="galeria.html#fotos">Fotos</a></li>
+                        <li><a class="dropdown-item" href="galeria.html#ilustraciones">Ilustraciones</a></li>
+
+                       </ul>
+                   </li>
+   
+                   <li class="nav-item">
+                       <a class="nav-link text-white" href="contacto.html">Contacto</a> 
+                   </li>
+                 
+               </ul>
+             </div>
+         </div>
+       </nav>
+       </header>
+   
+<main>
+  <div class="row px-5 py-5 align-items-center bg-black">
+      <div class="col-lg-4 py-5">
+          <img src="img/contacto.jpg" alt="Fondo" width="80%">
+      </div>
+
+    <div class="col-lg-4 text-end">
+        <h1>¡CONTACTAME!</h1>
+          <p1 class="textoseparador1 text-end">
+              Si te gustaría dialogar conmigo con respecto a mi trabajo no dudes en llenar el formulario y nos pondremos inmediatamente en contacto.
+          </p1>
+      </div>
+
+  <div class="col-lg-4 text-end">  
+      <div class="row">
+        <form id="Formulario"> 
+        <div class="mb-5"> 
+            <label for="name">Nombre:</label> 
+            <input type="text" name="name" class="form-control" id="Nombre" placeholder="Ingresa tu nombre" required> 
+          </div>
+        <div class="mb-5"> 
+          <label for="email">Correo:</label> 
+          <input type="email" name="email" class="form-control" id="Correo" placeholder="Ingresa tu email" required> 
+        </div> 
+        <div class="mb-5"> 
+          <label for="tel">Teléfono:</label> 
+          <input type="tel" name="phone" class="form-control" id="Tel" placeholder="Teléfono" > 
+        </div> 
+        <div class="mb-5"> 
+            <label for="message">Escribe tu mensaje</label> 
+            <textarea name="message" class="form-control" placeholder="Mensaje" required="" id="Mensaje"></textarea> 
+          </div> 
+        <button type="submit" class="boton" name="enviar">Enviar</button> 
+      </form> 
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-center">
+    <div class="container-fluid bg-dark text-white p-5 text-center">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2> CONTÁCTAME </h2>
+                <a href="mailto:ha.martinezromero@ugto.mx">Enviar correo</a>
+              </div>
+            <div class="col-lg-6">
+                <h4> SIGUEME EN MIS REDES SOCIALES</h4>
+                <a href="https://www.facebook.com/hassielandre.martinezromero/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/hassiel_mtz/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div> 
+
+        <div>
+            <h6 class="py-2">Hassiel André Martínez Romero <br> Proyecto Portafolio Personal | 2022</h6>
+        </div>    
+</footer>
+
+
+<!--Script De Button toast-->
+  <script>
+    document.getElementById("toastbtn").onclick = function() {
+      var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+      var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl)
+      })
+      toastList.forEach(toast => toast.show()) 
+    }
+  </script>
+
+<!--Script De Formulario-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <script> 
+    $(document).ready(function(){ 
+        $("#Formulario").submit(function(e) { 
+            e.preventDefault(); 
+
+            const nombre = $("#Nombre").val(); 
+            const correo = $("#Correo").val(); 
+            const tel = $("#Tel").val(); 
+            const direccion = $("#Direccion").val(); 
+            const mensaje = $("#Mensaje").val();
+
+            const referencia = "mailto:ha.martinezromero@ugto.mx?subject=Peticicion%20de%20informacion&body=Nombre:%20"+nombre+"%0D%0ACorreo:%20"+correo+"%0D%0ATelefono:%20"+tel+"%0D%0ADirección:%20"+mensaje; 
+            const enlace = document.createElement("a"); 
+            enlace.href = referencia; 
+            enlace.click();  
+        }); 
+    });      
+  </script> 
+
+</body>
+</html>
